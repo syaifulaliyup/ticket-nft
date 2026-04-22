@@ -132,5 +132,29 @@ html {
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(ellipse at top, oklch(0.85 0.22 135 / 8%), transparent 60%),
+      radial-gradient(ellipse at bottom, oklch(0.7 0.18 200 / 6%), transparent 60%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-pitch);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .ticket-notch {
+    -webkit-mask-image:
+      radial-gradient(circle at 0 50%, transparent 12px, #000 12px),
+      radial-gradient(circle at 100% 50%, transparent 12px, #000 12px);
+    -webkit-mask-composite: source-in;
+            mask-composite: intersect;
   }
 }
