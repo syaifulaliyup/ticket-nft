@@ -46,14 +46,18 @@ export function saveTickets(t: Ticket[]) {
   write(TICKETS_KEY, t);
 }
 
-export function useUser() {
-  return useSyncExternalStore(
+export function useUser(): User | null {
+  const snap = useSyncExternalStore(
     subscribe,
-    () => JSON.stringify(getUser()),
-    () => "null",
-  ) === "null"
-    ? null
-    : getUser();
+    () => localStorage.getItem(USER_KEY) ?? "",
+    () => "",
+  );
+  if (!snap) return null;
+  try {
+    return JSON.parse(snap) as User;
+  } catch {
+    return null;
+  }
 }
 
 export function useTickets() {
