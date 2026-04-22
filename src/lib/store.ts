@@ -9,7 +9,9 @@ const listeners = new Set<Listener>();
 const emit = () => listeners.forEach((l) => l());
 const subscribe = (l: Listener) => {
   listeners.add(l);
-  return () => listeners.delete(l);
+  return () => {
+    listeners.delete(l);
+  };
 };
 
 function read<T>(key: string, fallback: T): T {
