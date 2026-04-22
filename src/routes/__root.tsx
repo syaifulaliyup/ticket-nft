@@ -34,9 +34,13 @@ export const Route = createRootRoute({
       { title: "KickToken — NFT Football Tickets" },
       { name: "description", content: "Buy tamper-proof NFT football tickets. No fakes. No scalping." },
       { property: "og:title", content: "KickToken — NFT Football Tickets" },
-      { property: "og:description", content: "Tamper-proof NFT match tickets verified by QR." },
+      { property: "og:description", content: "Buy tamper-proof NFT football tickets. No fakes. No scalping." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "KickToken — NFT Football Tickets" },
+      { name: "twitter:description", content: "Buy tamper-proof NFT football tickets. No fakes. No scalping." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47a6b759-7944-4033-93ee-796e7f97a2bb/id-preview-ff754680--a646f384-f9de-4822-af27-a05dced5ca49.lovable.app-1776850001205.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47a6b759-7944-4033-93ee-796e7f97a2bb/id-preview-ff754680--a646f384-f9de-4822-af27-a05dced5ca49.lovable.app-1776850001205.png" },
     ],
     links: [
       {
